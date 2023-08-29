@@ -11,15 +11,37 @@ $(document).ready(function () {
   var formattedDate = year + '年' + month + '月' + day + '日';
   $('.time').text(formattedDate);
 
+  var targetDate = new Date(currentDate.getFullYear(), 7, 30); // 8月是第 7 个月，所以月份参数传入 7
+
+  function updateCountdown() {
+    var timeDiff = targetDate - new Date();
+
+    if (timeDiff > 0) {
+      var days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+      var countdownText = days + '天 ' + hours + '小时 ' + minutes + '分钟 ' + seconds + '秒';
+      $('#countdown-content').text(countdownText);
+      $(".box").hide()
+    } else {
+      $(".box").show()
+    }
+  }
+
+  updateCountdown(); // 更新倒计时
+
+  setInterval(updateCountdown, 1000);
+
   if (month === '08' && day === '30') {
     $(".birthdays").text("今天是你的生日哦").addClass("fade-in");
     console.log("今天是8月30号");
   } else {
     $(".birthdays").text("今天不是你生日哦").addClass("fade-in");
     console.log("今天不是8月30号");
-    $("button").hide()
-    $(".bz").hide();
-    $("#birthdayButton").hide();
+    // $("button").hide()
+    // $(".bz").hide();
   }
 
   $(".content").hide()

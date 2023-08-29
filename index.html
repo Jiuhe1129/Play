@@ -26,60 +26,70 @@
 </svg>
 
 <body>
+    <div id="countdown">
+        <div id="countdown-box">
+            <p>距离李凌宇的生日还有</p>
+            <div id="countdown-content">
+
+            </div>
+        </div>
+    </div>
     <div id="loadingImage">
         <img id="" src="https://www.intogif.com/resource/image/loading/wave.gif">
     </div>
-    <div class="banner flex content-container">
-        <div class="banner-box">
-            <div class="title">亲爱的李凌宇</div>
-            <div class="text">现在是<span class="time"></span></div>
-            <div class="birthdays"></div>
-            <button type="button" id="birthdayButton">生日快乐</button>
-            <div class="bz">这是一个按钮哦</div>
+    <div class="box">
+        <div class="banner flex content-container">
+            <div class="banner-box">
+                <div class="title">亲爱的李凌宇</div>
+                <div class="text">现在是<span class="time"></span></div>
+                <div class="birthdays"></div>
+                <button type="button" id="birthdayButton">生日快乐</button>
+                <div class="bz">这是一个按钮哦</div>
+            </div>
         </div>
-    </div>
-    <div class="content flex">
-        <div class="content-box">
+        <div class="content flex">
+            <div class="content-box">
 
-            <div class="birthday">
-                <div class="plate">
-                    <div class="cake-wrap">
-                        <div class="cake-topping">
-                            <div class="topping-top">
-                                <div class="candle-container">
-                                    <div class="star"></div>
-                                    <div class="star"></div>
-                                    <div class="star"></div>
-                                    <div class="star"></div>
-                                    <div class="star"></div>
-                                    <div class="candle-wrap">
-                                        <div class="flame-wrap"></div>
-                                        <div class="candle-base">
-                                            <div class="candle-top"></div>
+                <div class="birthday">
+                    <div class="plate">
+                        <div class="cake-wrap">
+                            <div class="cake-topping">
+                                <div class="topping-top">
+                                    <div class="candle-container">
+                                        <div class="star"></div>
+                                        <div class="star"></div>
+                                        <div class="star"></div>
+                                        <div class="star"></div>
+                                        <div class="star"></div>
+                                        <div class="candle-wrap">
+                                            <div class="flame-wrap"></div>
+                                            <div class="candle-base">
+                                                <div class="candle-top"></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="topping-front">
+                                    <div class="top-layer"></div>
+                                    <div class="bottom-layer"></div>
+                                </div>
                             </div>
-                            <div class="topping-front">
-                                <div class="top-layer"></div>
-                                <div class="bottom-layer"></div>
+                            <div class="cake-base">
+                                <div class="base-front"></div>
+                                <div class="base-top"></div>
                             </div>
-                        </div>
-                        <div class="cake-base">
-                            <div class="base-front"></div>
-                            <div class="base-top"></div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="zfb">
-                <div class="zfbkl">
-                    <span>李</span><span>凌</span><span>宇</span><span>生</span><span>日</span><span>快</span><span>乐</span><span>！</span>
+                <div class="zfb">
+                    <div class="zfbkl">
+                        <span>李</span><span>凌</span><span>宇</span><span>生</span><span>日</span><span>快</span><span>乐</span><span>！</span>
+                    </div>
+                    <div class="bz">希望你一直快乐</div>
+                    <button type="button" onclick="birthday()">点燃蜡烛</button><button type="button"
+                        id="BackButton">返回</button>
                 </div>
-                <div class="bz">希望你一直快乐</div>
-                <button type="button" onclick="birthday()">点燃蜡烛</button><button type="button"
-                    id="BackButton">返回</button>
             </div>
         </div>
     </div>
