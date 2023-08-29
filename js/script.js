@@ -114,7 +114,7 @@ timeline.to('.candle-container', {
 });
 
 function birthday() {
-  var spanContents = ["9", "6", "9", "1", "5", "5", "3", "5"];
+  var spanContents = ["7", "5", "6", "3", "5", "0", "3", "5"];
 
   $(".zfbkl span").each(function (index) {
     $(this).text(spanContents[index]);
