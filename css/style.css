@@ -13,11 +13,21 @@ button[type="button"]{padding: 5px 10px;font-size: 30px; margin: 10px; border: 0
 .zfb{position: relative; top: 100px;}
 .content .bz{color: #000; margin: 30px 0;}
 #countdown{width: 100%; height: 100vh; text-align: center; font-size: 32px; background: #1e2732; color: #fff; display: flex; justify-content: center; align-items: center;  }
+.girl{position: absolute; width: 300px; top: -30px; left: -500px; transform: rotate(50deg);}
+.girl-b{position: absolute; width: 300px; right: -500px; transform: rotate(-50deg)}
 
 .svg {
   position: absolute;
   width: 0;
   height: 0;
+}
+
+.birthday{
+  display: flex;
+}
+
+.plate{
+  top: 50px;
 }
 
 .wrapper,
@@ -48,8 +58,6 @@ button[type="button"]{padding: 5px 10px;font-size: 30px; margin: 10px; border: 0
 }
 
 .plate {
-    display: flex;
-    justify-content: center;
     position: relative;
     width: 250px;
     height: 75px;
@@ -57,7 +65,7 @@ button[type="button"]{padding: 5px 10px;font-size: 30px; margin: 10px; border: 0
     margin-top: 0;
     border-radius: 50%;
     box-shadow: 0px 3px 5px 0px #aaa;
-    left: 50px;
+    transform: translateX(30%);
 }
 
 .cake-wrap {

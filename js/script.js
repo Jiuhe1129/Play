@@ -24,11 +24,16 @@ $(document).ready(function () {
 
       var countdownText = days + '天 ' + hours + '小时 ' + minutes + '分钟 ' + seconds + '秒';
       $('#countdown-content').text(countdownText);
+      $("#countdown").show();
       $(".box").hide()
     } else {
       $(".box").show()
+      $("#countdown").hide()
     }
   }
+
+  $(".girl").css("left", "-100px")
+  $(".girl-b").css("right", "-100px")
 
   updateCountdown(); // 更新倒计时
 
@@ -40,8 +45,8 @@ $(document).ready(function () {
   } else {
     $(".birthdays").text("今天不是你生日哦").addClass("fade-in");
     console.log("今天不是8月30号");
-    // $("button").hide()
-    // $(".bz").hide();
+    $("button").hide()
+    $(".bz").hide();
   }
 
   $(".content").hide()
@@ -56,12 +61,40 @@ $(document).ready(function () {
   $("#birthdayButton").click(function () {
     $(".content").show()
     $(".banner").add(".content").css("transform", "translate(0%, -100vh)")
+    $(".girl").css("top", "670px")
+    $(".girl-b").css("bottom", "-275px")
   });
   $("#BackButton").click(function () {
-    console.log("a")
+    $(".girl-b").css("bottom", "-100px")
+    $(".girl").css("top", "-30px")
     $(".banner").add(".content").css("transform", "translate(0%, 0vh)")
   });
 });
+
+function openAlipayApp() {
+  // 判断是否在移动设备上
+  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+  if (isMobile) {
+    var urlScheme = 'alipayqr://platformapi/startapp?saId=88886666'; // 支付宝 App 的 URL Scheme
+
+    // 使用 iframe 打开支付宝 App
+    var iframe = document.createElement('iframe');
+    iframe.style.display = 'none';
+    iframe.src = urlScheme;
+    document.body.appendChild(iframe);
+
+    // 如果支付宝 App 不可用，则跳转至支付宝网页版
+    setTimeout(function () {
+      document.location.href = 'https://www.alipay.com/';
+    }, 3000); // 假设 3 秒后跳转
+  } else {
+    // 非移动设备，处理逻辑...
+    console.log('请使用移动设备访问此页面！');
+  }
+}
+
+
 
 const timeline = gsap.timeline({
   duration: 0.3
