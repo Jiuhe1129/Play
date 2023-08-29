@@ -17,8 +17,9 @@ $(document).ready(function () {
   } else {
     $(".birthdays").text("今天不是你生日哦").addClass("fade-in");
     console.log("今天不是8月30号");
-    // $("button").hide()
-    // $(".bz").hide();
+    $("button").hide()
+    $(".bz").hide();
+    $("#birthdayButton").hide();
   }
 
   $(".content").hide()
